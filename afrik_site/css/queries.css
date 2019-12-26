@@ -1,0 +1,44 @@
+/* small tablets to big tablets (width: 1024px to 1200px) */
+@media only screen and (max-width:1200px){
+    
+}
+
+/* width: 768px to 1023px */
+@media only screen and (max-width:1023px){
+    .logo_tuwaxu,
+    .header_main_nav_sticky .logo_tuwaxu {
+        width: 10%;
+        height: 65px;
+        margin-right: 0;
+    }
+    .nav_drop_menu {display: none;}
+    .menu_button_small_size {
+        display: inline-block;
+    }
+    .nav_drop_menu {
+        width: 90%;
+        margin-left: 20px;
+    }
+    .nav_drop_menu > ul,
+    .nav_drop_menu > ul >li {
+        font-size: 10px;
+    }
+    .nav_drop_menu > ul {
+        width: 90%;
+    }
+    .nav_drop_menu > ul >li {
+        width: 22.5%;
+        height: 60px;
+    }
+    
+}
+
+/* width: 481px to 767px */
+@media only screen and (max-width:767px){
+    
+}
+
+/* mobile phones */
+@media only screen and (max-width:480px){
+    
+}
