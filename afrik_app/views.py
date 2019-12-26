@@ -3,7 +3,6 @@ from django.views.generic import ListView
 from django.views.generic import TemplateView
 from .forms import CommentsForm
 
-import requests
 # Create your views here.
 
 class Accueil(TemplateView):

@@ -1,20 +1,5 @@
-beautifulsoup4           4.8.1    
-certifi                  2019.6.16
-cffi                     1.13.1   
-Django                   2.2.1    
-django-bootstrap3        11.1.0   
-django-bootstrap4        1.0.1    
-django-braces            1.13.0   
-django-phone-field       1.8.0    
-django-phonenumber-field 4.0.0    
-django-taggit            0.22.2   
-gunicorn                 19.9.0   
-misaka                   2.1.1    
-pip                      19.2.2   
-pycparser                2.19     
-pytz                     2019.2   
-setuptools               41.0.1   
-soupsieve                1.9.4    
-sqlparse                 0.3.0    
-wheel                    0.33.4   
-
+certifi==2019.6.16
+Django==2.2.1
+gunicorn==19.9.0
+pytz==2019.2
+sqlparse==0.3.0
