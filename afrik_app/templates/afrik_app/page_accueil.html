@@ -1,0 +1,144 @@
+{% extends "afrik_app/base.html"%}
+{% load static %}
+{% block title%} {% endblock %}
+
+{% block content%}
+    <section class="section-cours-en-ligne js_section_cours">
+            <div class="row">
+                <h2> Cours En Ligne!</h2>
+                <p class="section-cours-en-ligne-purpose">
+                    Accéder à des cours en ligne gratuits avec des séries d'execercices pertinents
+                </p>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-4 box section-cours-en-ligne_div"> <!-- section-cours-en-ligne_div added to reduce height of four divs -->
+                    <figure class="cours-terminal">
+                        <h3> Terminale S</h3>
+                        <img src="{%static "img/Ressources/img/exercice-maths-terminale-s.jpg"%}"  alt="Image Terminale S">
+                        <p> Cours détaillés chapitre par chapitre Termsection-cours-en-ligne_divinale Scientifique: <br/>
+                            Analyse, Géométrie,Suites, Probabilité et Statistiques.
+                        </p>
+                    <a class="btn-scl btn-scl1" href="#">Accéder</a>
+
+                    </figure>
+                </div>
+                <div class="col span-1-of-4 box section-cours-en-ligne_div">
+                    <figure class="cours-permiere">
+                        <h3> Premiere S</h3>
+                        <img src="{%static "img/Ressources/img/qcm-maths-1ere-s.jpg"%}" alt="Image Première S">
+                        <p> Cours détaillés de Première Scientifique, accompagné des exercices d'application
+                        </p>
+                        <a class="btn-scl btn-scl2" href="#">Accéder</a>
+                    </figure>
+                </div>
+                <div class="col span-1-of-4 box section-cours-en-ligne_div">
+                    <figure class="cours-seconde">
+                        <h3> Seconde Generale</h3>
+                        <img src="{%static "img/Ressources/img/images-seconde.png"%}" alt="Image Seconde Générale">
+                        <p> Cours détaillés de Seconde Générale, accompagné des exercices d'application. La seconde étant une classe    de tronc commun, nous mettons à votre disposition des fiches de résumé sur chaque chapitre.
+                        </p>
+                        <a class="btn-scl btn-scl3" href="#">Accéder</a>
+                    </figure>
+                </div>
+                <div class="col span-1-of-4 box section-cours-en-ligne_div">
+                    <figure class="cours-autres" >
+                        <h3> Autres </h3>
+                        <img src="{%static "img/Ressources/img/image-autres.png"%}" alt="Image Autres filières">
+                        <p> Vous trouverez dans cette partie des cours détaillés de plusieurs classe comme Terminale ES, STMG ou encore Terminale Lettre
+                        </p>
+                        <a class="btn-scl btn-scl4" href="#">Accéder</a>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section-prof-particulier" id="works">
+            <!--<h2> Un proffsseur pour moi </h2> -->
+                <div class="cours-domicile-sub-1">
+                    <div class="cours-domicile-sub-1__heading">
+                        <h3> Cours en groupe </h3>
+                    </div>
+                    <div class="cours-domicile-sub-1__content">
+                        <p class="cours-en-groupe-description">
+                        Le cours en groupe vous permettra de combler vos lacunes en maths dans un petit groupe d'au maximum dix élèves. Une fois inscrit à ce cours vous aurez droit à deux heures de cours par semaine, ainsi qu'un série d'exercice à l'issue de chaque séance qui vous permettra de retravailler les notions abordées en cours. votre taux de réussite est proportionnel....
+                    </p>
+                    </div>
+                    <div class="cours-domicile-sub-1__img">
+                        <img src="{%static "img/Ressources/img/accueil.jpg"%}"  alt="image de cours en groupe" class="cours-domicile-sub-1__img__real">
+                    </div>
+                    <div class="cours-domicile-sub-1_btn">
+                         <a class="cours-domicile-sub-btn" href="#">Découvrir</a>
+                    </div>
+                </div>
+                <div class="cours-domicile-sub-2">
+                    <div class="cours-domicile-sub-2__heading">
+                        <h3> Cours particulier à domicile</h3>
+                    </div>
+                    <div class="cours-domicile-sub-2__content">
+                        <p class="cours-domicile-description">
+                        Le cours particulier avec un prof de maths expérimenté à domicile est un moyen éfficace de remonter votre niveau en mathématique et de gagner en confiance avant l'examen. Toute fois ce cours n'aura d'impact sur vos résultats que quand vous travaillerez réguilièrement les séries d'exercices fourni par le prof, et de poser vos questions sans complexe.
+                        </p>
+                    </div>
+                    <div class="cours-domicile-sub-2__img">
+                        <img src="{%static "img/Ressources/img/mathematiques-collectif.jpg"%}" alt="image de cours à domicile" class="cours-domicile-sub-2__img__real">
+                    </div>
+                    <div class="cours-domicile-sub-2_btn">
+                         <a class="cours-domicile-sub-btn " href="#">Découvrir</a>
+                    </div>
+                </div>
+          </section>
+
+        <section class="contact_form">
+
+          {% if new_comment %}
+            <h2> Votre message est bien reçu </h2>
+          {% else %}
+            <h2> Laissez Nous un commentaire  </h2>
+            <form action="." method="post">
+              <div class="Commentaire_form">
+              {{ comment_form.as_p}}
+              {% csrf_token %}
+              <p> <input type="submit" value="Envoyer"></p>
+              </div>
+            </form>
+          {% endif %}
+
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    This webpage was created for the purpose of sharing and learning  Team afrikattitude. No copyrights here.<br>
+                    This webpage is for you! So go and do whatever you want with contents it and have fun.
+                </p>
+                <p>
+                    Build with <i class="ion-ios-heart" style="color: #ea0000; padding: 0 3px;"></i> in the beautiful city of Versailles, France, March 2019.
+                </p>
+                <p>
+                    Copyright &copy; 2019 by afrikattitude-Education. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+        <script src="{% static "js/scrips.js"%}"></script>
+        <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "afrik_app/base.html"%}
+{% block title%} {% endblock %}
+
+{% block content%}
+
+
+<section class="contact_form">
+  <?php
+      <div class="form-message success">
+          Votre commentaire est envoyé avec succes!
+      </div>
+      <div class="form-message error">
+          Oops! une erreur s'est produite, reessayez!
+      </div>
+  ?>
+
+  <h2> Laissez nous un commentaire</h2>
+  <div class="row">
+      <form method="post" action="mailer.php" class="name_form">
+          <div class="row">
+              <div class="col span-1-of-2">
+                  <input type="radio" name="contact" id="eleve" value="Je suis eleve/parent" checked>
+                  <label for="eleve"> Je suis eleve/parent</label>
+              </div>
+              <div class="col span-1-of-2">
+                  <input type="radio" name="contact" id="enseignant" value="Je suis enseignant/candidat" >
+                  <label for="enseignant"> Je suis enseignant/candidat</label>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                  Nom
+              </div>
+              <div class="col span-2-of-3">
+                      <input type="text" name="name" id="name" placeholder="Votre Nom" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                  Email
+              </div>
+              <div class="col span-2-of-3">
+                  <input type="email" name="email" id="email" placeholder="Votre Email" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                  Téléphone
+              </div>
+              <div class="col span-2-of-3">
+                  <input type="number" name="number" id="number" placeholder="Votre Numero" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                  Commentaire
+              </div>
+              <div class="col span-2-of-3">
+                  <textarea name="message"  placeholder="Laissez nous vos commeantaires"></textarea>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col span-1-of-3">
+                  <label>&nbsp;</label>
+              </div>
+              <div class="col span-2-of-3">
+                  <button type="submit" class="cours-domicile-sub-btn"> Envoyer</button>
+              </div>
+
+          </div>
+      </form>
+  </div>
+</section>
+
+
+{% endblock %}
