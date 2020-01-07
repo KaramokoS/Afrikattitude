@@ -1,5 +1,5 @@
 certifi==2019.6.16
-Django==2.2.1
+Django==2.2.8
 gunicorn==19.9.0
 pytz==2019.2
 sqlparse==0.3.0
