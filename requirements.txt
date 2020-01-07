@@ -3,4 +3,4 @@ Django==2.2.1
 gunicorn==19.9.0
 pytz==2019.2
 sqlparse==0.3.0
-phone_field==1.8.0 
+django-phone-field==1.8.0 
