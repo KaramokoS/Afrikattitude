@@ -1,3 +1,7 @@
+:root{
+  --main-ui-color: #2e6192;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +38,7 @@ h1 {
     padding: 20px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--main-ui-color);
     font-size: 100%;
     font-weight: 300;
     text-transform: uppercase;
@@ -44,12 +48,12 @@ h2 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--main-ui-color);
 }
 h2:after {
     display: block;
     height: 2px;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -58,7 +62,7 @@ h2:after {
 h3 {
     text-align: left;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--main-ui-color);
 }
 .btn:link,
 .btn:visited{
@@ -81,14 +85,14 @@ h3 {
 .btn-b3:visited{
     width: 160px;
     height: 55px;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
     border: 2px solid;
     color: #fff;
 }
 .btn:hover,
 .btn:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--main-ui-color);
 }
 /*----------------------------------------------------Menu--------------------------------------------------------------------------*/
 .logo_tuwaxu{
@@ -115,7 +119,7 @@ h3 {
     margin: 0;
     text-align: center;
     display: inline-block;
-    background: #2e86de;
+    background: var(--main-ui-color);
     border-radius: 5px;
 }
 .nav_drop_menu > ul > li {
@@ -146,7 +150,7 @@ ul.drop-menu li {
 }
 ul.drop-menu li:hover{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--main-ui-color);
     border: 2px solid;
     border-radius: 5px;
 }
@@ -232,7 +236,7 @@ li:hover > ul.drop-menu li {
     width: 55px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--main-ui-color);
     position: absolute;
     top: 10px;
     transform: rotate(0);
@@ -242,7 +246,7 @@ li:hover > ul.drop-menu li {
     width: 55px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--main-ui-color);
     position: absolute;
     top: 20px;
     transform: rotate(0);
@@ -252,7 +256,7 @@ li:hover > ul.drop-menu li {
     width: 35px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--main-ui-color);
     position: absolute;
     top: 30px;
     transform: rotate(0);
@@ -391,7 +395,7 @@ li:hover > ul.drop-menu li {
     width: 70%;
     height: 0;
     padding-bottom: 40%;
-    background: #2e86de;
+    background: var(--main-ui-color);
     border: solid 40px rgba(44, 44, 44, 0.78);
     transform: translate(90%,70%);
 }
@@ -462,32 +466,32 @@ li:hover > ul.drop-menu li {
 .btn-scl1:link,
 .btn-scl1:visited {
     margin-top: 80px;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
 }
 
 .btn-scl2:link,
 .btn-scl2:visited {
     margin-top: 127px;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
 }
 
 .btn-scl3:link,
 .btn-scl3:visited {
     margin-top: 40px;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
 }
 
 .btn-scl4:link,
 .btn-scl4:visited {
     margin-top: 107px;
     text-align: center;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
 }
 
 .btn-scl:hover,
 .btn-scl:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--main-ui-color);
 }
 
 /*----------------------------------------------------------SectionCours------------------------------------------------------------*/
@@ -572,13 +576,13 @@ li:hover > ul.drop-menu li {
 .cours-domicile-sub-btn:link,
 .cours-domicile-sub-btn:visited {
     text-align: center;
-    background-color: #2e86de;
+    background-color: var(--main-ui-color);
 }
 
 .cours-domicile-sub-btn:hover,
 .cours-domicile-sub-btn:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--main-ui-color);
 }
 
 /*----------------------------------------------------------SectionCommentaire-----------------------------------------------------------*/
@@ -699,4 +703,47 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+
+/*********** Second destination Section for map *************/
+.destination_section {
+    height: auto;
+    padding: 10px;
+}
+.destination_section > .container > h1,
+.destination_section > h2 {
+    color: var(--site-main-color);
+}
+
+
+.destination_section > .container {
+    /*max-width: 800px;*/
+    margin: auto;
+}
+
+/* Specific mapael css class are below
+ * 'mapael' class is added by plugin
+*/
+
+.destination_section > .mapael .map {
+    position: relative;
+}
+
+.destination_section > .mapael .mapTooltip {
+    position: absolute;
+    background-color: #fff;
+    moz-opacity: 0.70;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 200px;
+    display: none;
+    color: #343434;
+}
+
+.destination_section > .mapael .areaLegend {
+    margin-bottom: 20px;
 }

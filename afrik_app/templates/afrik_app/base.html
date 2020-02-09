@@ -15,29 +15,31 @@
     <link rel="stylesheet" href="{% static "css/afrik_app.css"%}">
     <link rel="stylesheet" href="{% static "css/queries.css"%}">
     <link rel="stylesheet" href="{% static "css/ionicons.min.css"%}">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <meta name="description" content="afrikattitude est un lieu de partage de connaissance. Vous y trouverez des annales de bac et de devoir de ces trois pays: Mali, Burkina Faso et Sénégal">
 
 
 
     <meta charset="utf-8">
   </head>
   <body>
-  <header>
+<!--  <header> -->
     <div id="sidebar">
       <nav class="header_main_nav">
         <div class="row">
             <a class="menu_button_small_size js__menu_button_small_size">
               <i class="ion-navicon-round"></i>
             </a>
-         <img src="static/img/logo_afrikattitude-01.jpg" alt="logo afrikattitude" class="logo_tuwaxu"> <br>
+        <a href="{% url "accueil"%}">
+          <img src="{% static "img/logo_afrikattitude-01.jpg" %}" alt="logo afrikattitude" class="logo_tuwaxu"> <br>
+        </a>
          <nav class="nav_drop_menu ">
              <ul>
                  <li>Mathematiques
                      <ul class="drop-menu men-#{i}">
-                         <li><a href="maths.html">Cours en ligne</a></li>
+                         <li><a href="{% url 'tarifs'%}">Cours en ligne</a></li>
                          <li>Cours de soutien</li>
                          <li>Programme</li>
                          <li>Applications</li>
@@ -71,11 +73,45 @@
            </div>
          </nav>
        </div>
-</header>
+<!--</header> -->
 <div id="content">
   {% block content %}
   {% endblock %}
 </div>
+
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                This webpage was created for the purpose of sharing and learning  Team afrikattitude. No copyrights here.<br>
+                This webpage is for you! So go and do whatever you want with contents it and have fun.
+            </p>
+            <p>
+                Build with <i class="ion-ios-heart" style="color: #ea0000; padding: 0 3px;"></i> in the beautiful city of Versailles, France, March 2019.
+            </p>
+            <p>
+                Copyright &copy; 2019 by afrikattitude-Education. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
   </body>
 </html>

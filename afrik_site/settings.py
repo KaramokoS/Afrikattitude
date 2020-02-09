@@ -25,7 +25,7 @@ SECRET_KEY = 'v*-_=f43cseij7jek-#sxvmzs8vr)=hq$@y(+a3%o+=a1b34x6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['powerful-shore-55406.herokuapp.com','afrikattitude.herokuapp.com','0.0.0.0']
+ALLOWED_HOSTS = ['powerful-shore-55406.herokuapp.com','afrikattitude.herokuapp.com','0.0.0.0','127.0.0.1']
 
 
 # Application definition

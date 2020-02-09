@@ -1,3 +1,8 @@
+:root{
+  --site-main-color: #2e6192;
+  --tarifs-background: linear-gradient(#ECE9E6, #FFFFFF);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +39,7 @@ h1 {
     padding: 20px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--site-main-color);
     font-size: 100%;
     font-weight: 300;
     text-transform: uppercase;
@@ -44,12 +49,12 @@ h2 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--site-main-color);
 }
 h2:after {
     display: block;
     height: 2px;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -58,7 +63,7 @@ h2:after {
 h3 {
     text-align: left;
     margin-bottom: 10px;
-    color: #2e86de;
+    color: var(--site-main-color);
 }
 .btn:link,
 .btn:visited{
@@ -81,14 +86,14 @@ h3 {
 .btn-b3:visited{
     width: 160px;
     height: 55px;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
     border: 2px solid;
     color: #fff;
 }
 .btn:hover,
 .btn:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--site-main-color);
 }
 /*----------------------------------------------------Menu--------------------------------------------------------------------------*/
 .logo_tuwaxu{
@@ -115,7 +120,7 @@ h3 {
     margin: 0;
     text-align: center;
     display: inline-block;
-    background: #2e86de;
+    background: var(--site-main-color);
     border-radius: 5px;
 }
 .nav_drop_menu > ul > li {
@@ -146,7 +151,7 @@ ul.drop-menu li {
 }
 ul.drop-menu li:hover{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--site-main-color);
     border: 2px solid;
     border-radius: 5px;
 }
@@ -232,7 +237,7 @@ li:hover > ul.drop-menu li {
     width: 55px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--site-main-color);
     position: absolute;
     top: 10px;
     transform: rotate(0);
@@ -242,7 +247,7 @@ li:hover > ul.drop-menu li {
     width: 55px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--site-main-color);
     position: absolute;
     top: 20px;
     transform: rotate(0);
@@ -252,7 +257,7 @@ li:hover > ul.drop-menu li {
     width: 35px;
     height: 2px;
     display: block;
-    background: #2e86de;
+    background: var(--site-main-color);
     position: absolute;
     top: 30px;
     transform: rotate(0);
@@ -391,7 +396,7 @@ li:hover > ul.drop-menu li {
     width: 70%;
     height: 0;
     padding-bottom: 40%;
-    background: #2e86de;
+    background: var(--site-main-color);
     border: solid 40px rgba(44, 44, 44, 0.78);
     transform: translate(90%,70%);
 }
@@ -462,32 +467,32 @@ li:hover > ul.drop-menu li {
 .btn-scl1:link,
 .btn-scl1:visited {
     margin-top: 80px;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
 }
 
 .btn-scl2:link,
 .btn-scl2:visited {
     margin-top: 127px;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
 }
 
 .btn-scl3:link,
 .btn-scl3:visited {
     margin-top: 40px;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
 }
 
 .btn-scl4:link,
 .btn-scl4:visited {
     margin-top: 107px;
     text-align: center;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
 }
 
 .btn-scl:hover,
 .btn-scl:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--site-main-color);
 }
 
 /*----------------------------------------------------------SectionCours------------------------------------------------------------*/
@@ -572,13 +577,13 @@ li:hover > ul.drop-menu li {
 .cours-domicile-sub-btn:link,
 .cours-domicile-sub-btn:visited {
     text-align: center;
-    background-color: #2e86de;
+    background-color: var(--site-main-color);
 }
 
 .cours-domicile-sub-btn:hover,
 .cours-domicile-sub-btn:active{
     background-color: #fff;
-    color: #2e86de;
+    color: var(--site-main-color);
 }
 
 /*----------------------------------------------------------SectionCommentaire-----------------------------------------------------------*/
@@ -699,4 +704,58 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+
+/*----------------------------------------------------------*/
+/*******************                      *******************/
+/*****************   Tarifs               *******************/
+/*******************                      *******************/
+/*----------------------------------------------------------*/
+
+.section_tarifs {
+    display: flex;
+    padding: 20px 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.classe_1,
+.classe_2,
+.classe_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 0 3px;
+    height: 50vw;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    border-color: var(--site-main-color);
+}
+.classe_1:hover,
+.classe_2:hover,
+.classe_3:hover {
+    border-bottom: 5px solid;
+    border-color: var(--site-main-color);
+}
+.classe_1 > h3,
+.classe_2 > h3,
+.classe_3 > h3 {
+    text-align: center;
+    color: var(--site-main-color);
+}
+
+.classe_1_description,
+.classe_2_description,
+.classe_3_description {
+    margin: 5px 0 10px 0;
+    background-image: var(--tarifs-background);
+    border-radius: 5px;
+}
+.classe_3_img > img,
+.classe_1_img > img,
+.classe_2_img > img {
+    width: 70%;
+    height: 100%;
 }

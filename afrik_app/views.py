@@ -23,3 +23,6 @@ def page_accueil_view(request):
 
     return render(request,'afrik_app/page_accueil.html',{'new_comment': new_comment,
                                                          'comment_form': comment_form})
+
+def tarifs_view(request):
+    return render(request, 'afrik_app/tarifs.html', {})
