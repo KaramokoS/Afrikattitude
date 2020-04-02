@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(../img/accueil.jpg);
+    background-image: #fff; /*linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(../img/accueil.jpg);*/.
     background-size: 700px 400px;
     background-repeat: no-repeat;
     background-position: bottom;

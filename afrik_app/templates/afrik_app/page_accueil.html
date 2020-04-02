@@ -3,59 +3,79 @@
 {% block title%} {% endblock %}
 
 {% block content%}
-<header>
-</header>
     <section class="section-cours-en-ligne js_section_cours">
-            <div class="row">
+            <div class="text-center">
                 <h2> Cours En Ligne!</h2>
-                <p class="section-cours-en-ligne-purpose">
-                    Accéder à des cours en ligne gratuits avec des séries d'execercices pertinents
-                </p>
             </div>
-            <div class="row">
-                <div class="col span-1-of-4 box section-cours-en-ligne_div"> <!-- section-cours-en-ligne_div added to reduce height of four divs -->
-                    <figure class="cours-terminal">
-                        <h3> Terminale S</h3>
-                        <img src="{%static "img/Ressources/img/exercice-maths-terminale-s.jpg"%}"  alt="Image Terminale S">
-                        <p> Cours détaillés chapitre par chapitre Termsection-cours-en-ligne_divinale Scientifique: <br/>
-                            Analyse, Géométrie,Suites, Probabilité et Statistiques.
-                        </p>
-                    <a class="btn-scl btn-scl1" href="#">Accéder</a>
+            <div class=" differ-levels-ts-texp">
+                <div class="col span-1-of-4 section-cours-en-ligne_div"> <!-- section-cours-en-ligne_div added to reduce height of four divs -->
+                        <div class="cours-en-ligne_titles">
+                          <h3> Terminale S</h3>
+                        </div>
+                        <div class="cours-en-ligne_img">
+                          <img src="{%static "img/Ressources/img/image-autres.png"%}"  alt="Image Terminale S">
+                        </div>
+                        <div class="cours-en-ligne_paragraphes">
+                          <p> Cours détaillés chapitre par chapitre Term s ection-cours-en-ligne_divinale Scientifique: <br/>
+                              Analyse, Géométrie,Suites, Probabilité et Statistiques.
+                          </p>
+                        </div>
 
-                    </figure>
+                        <div class="cours-en-ligne_btn">
+                          <a class="btn-scl btn-scl1" href="#">Accéder</a>
+                        </div>
                 </div>
-                <div class="col span-1-of-4 box section-cours-en-ligne_div">
-                    <figure class="cours-permiere">
-                        <h3> Premiere S</h3>
-                        <img src="{%static "img/Ressources/img/qcm-maths-1ere-s.jpg"%}" alt="Image Première S">
-                        <p> Cours détaillés de Première Scientifique, accompagné des exercices d'application
-                        </p>
-                        <a class="btn-scl btn-scl2" href="#">Accéder</a>
-                    </figure>
+                <div class="col span-1-of-4 section-cours-en-ligne_div">
+                        <div class="cours-en-ligne_titles">
+                          <h3> Premiere S</h3>
+                        </div>
+                        <div class="cours-en-ligne_img">
+                          <img src="{%static "img/Ressources/img/qcm-maths-1ere-s.jpg"%}" alt="Image Première S">
+                        </div>
+                        <div class="cours-en-ligne_paragraphes">
+                          <p> Cours détaillés de Première Scientifique, accompagné des exercices d'application
+                          </p>
+                        </div>
+                        <div class="cours-en-ligne_btn">
+                            <a class="btn-scl btn-scl2" href="#">Accéder</a>
+                        </div>
                 </div>
-                <div class="col span-1-of-4 box section-cours-en-ligne_div">
-                    <figure class="cours-seconde">
-                        <h3> Seconde Generale</h3>
-                        <img src="{%static "img/Ressources/img/images-seconde.png"%}" alt="Image Seconde Générale">
-                        <p> Cours détaillés de Seconde Générale, accompagné des exercices d'application. La seconde étant une classe    de tronc commun, nous mettons à votre disposition des fiches de résumé sur chaque chapitre.
-                        </p>
-                        <a class="btn-scl btn-scl3" href="#">Accéder</a>
-                    </figure>
+                <div class="col span-1-of-4 section-cours-en-ligne_div">
+                        <div class="cours-en-ligne_titles">
+                          <h3> Seconde Generale</h3>
+                        </div>
+                        <div class="cours-en-ligne_img">
+                          <img src="{%static "img/Ressources/img/images-seconde.png"%}" alt="Image Seconde Générale">
+                        </div>
+                        <div class="cours-en-ligne_paragraphes">
+                          <p> Cours détaillés de Seconde Générale, accompagné des exercices d'application. La seconde étant une classe    de tronc commun, nous mettons à votre disposition des fiches de résumé sur chaque chapitre.
+                          </p>
+                        </div>
+                        <div class="cours-en-ligne_btn">
+                          <a class="btn-scl btn-scl3" href="#">Accéder</a>
+                        </div>
                 </div>
-                <div class="col span-1-of-4 box section-cours-en-ligne_div">
-                    <figure class="cours-autres" >
-                        <h3> Autres </h3>
-                        <img src="{%static "img/Ressources/img/image-autres.png"%}" alt="Image Autres filières">
-                        <p> Vous trouverez dans cette partie des cours détaillés de plusieurs classe comme Terminale ES, STMG ou encore Terminale Lettre
-                        </p>
-                        <a class="btn-scl btn-scl4" href="#">Accéder</a>
-                    </figure>
+                <div class="col span-1-of-4 section-cours-en-ligne_div">
+                        <div class="cours-en-ligne_titles">
+                          <h3> Autres </h3>
+                        </div>
+                        <div class="cours-en-ligne_img">
+                          <img src="{%static "img/Ressources/img/image-autres.png"%}" alt="Image Autres filières">
+                        </div>
+                        <div class="cours-en-ligne_paragraphes">
+                          <p> Vous trouverez dans cette partie des cours détaillés de plusieurs classe comme Terminale ES, STMG ou encore Terminale Lettre
+                          </p>
+                        </div>
+                        <div class="cours-en-ligne_btn">
+                          <a class="btn-scl btn-scl4" href="#">Accéder</a>
+                        </div>
+
                 </div>
             </div>
         </section>
         <section class="section-prof-particulier" id="works">
             <!--<h2> Un proffsseur pour moi </h2> -->
-                <div class="cours-domicile-sub-1">
+                <div class="cours-domicile-sub-1 ">
                     <div class="cours-domicile-sub-1__heading">
                         <h3> Cours en groupe </h3>
                     </div>
@@ -89,22 +109,6 @@
                 </div>
           </section>
 
-      <!--  <section class="contact_form">
-
-          {% if new_comment %}
-            <h2> Votre message est bien reçu </h2>
-          {% else %}
-            <h2> Laissez Nous un commentaire  </h2>
-            <form action="." method="post">
-              <div class="Commentaire_form">
-              {{ comment_form.as_p}}
-              {% csrf_token %}
-              <p> <input type="submit" value="Envoyer"></p>
-              </div>
-            </form>
-          {% endif %}
-
-        </section> -->
         <!-- Contact Section -->
         <section class="page-section" id="contact">
 
@@ -114,9 +118,6 @@
             <!-- Icon Divider -->
             <div class="divider-custom">
               <div class="divider-custom-line"></div>
-              <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
-              </div>
               <div class="divider-custom-line"></div>
             </div>
 
@@ -159,11 +160,5 @@
             </div>
 
         </section>
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
-        <script src="{% static "js/scrips.js"%}"></script>
-        <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 
 {% endblock %}

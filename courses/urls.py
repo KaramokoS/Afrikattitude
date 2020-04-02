@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from courses.views import CourseListView,CourseDetailView
+
+app_name = "course"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('courses/', include('courses.urls')),
-    path('', include('afrik_app.urls')),
+    path('', CourseListView.as_view(), name='list'),
+    path('<int:id>/<slug:slug>/', CourseDetailView.as_view(), name='detail'),
 ]
