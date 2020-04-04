@@ -428,8 +428,6 @@ li:hover > ul.drop-menu li {
 .section-cours-en-ligne {
     background-image: linear-gradient(to left top,rgb(235, 235, 235),  rgb(248, 247, 247));
     overflow: hidden;
-
-
 }
 
 .differ-levels-ts-texp {
@@ -825,13 +823,10 @@ a, a:hover, a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    perspective: 1500px;
+.barre_nav {
+    z-index: 9999;
+    left: 80%;
 }
-
 
 #sidebar1 {
     min-width: 250px;
@@ -841,6 +836,8 @@ a, a:hover, a:focus {
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
     display: none;
+    position: fixed;
+    z-index: 9999;
 }
 
 #sidebar1.active {
