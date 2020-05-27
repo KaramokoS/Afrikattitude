@@ -961,3 +961,12 @@ a.article, a.article:hover {
     opacity: 1;
     margin: 5px auto;
 }
+
+/* ---------------------------------------------------
+    Course Module Style
+----------------------------------------------------- */
+
+.selected {
+  color: #fff;
+  background-color: var(--site-main-color);
+}

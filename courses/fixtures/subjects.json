@@ -1,0 +1,52 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Maths",
+    "description": "Terminale",
+    "pub_date": "2020-03-22T21:39:12.656Z",
+    "slug": "maths"
+  }
+},
+{
+  "model": "courses.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Physique",
+    "description": "Terminale",
+    "pub_date": "2020-03-22T21:39:34.465Z",
+    "slug": "physique"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "Etude de fonction",
+    "image": "",
+    "description": "Premier cours de maths",
+    "pub_date": "2020-03-22T21:45:24.256Z",
+    "slug": "etude-de-fonction",
+    "overview": null,
+    "created": "2020-05-02T02:22:03.508Z"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": 1,
+    "subject": 2,
+    "title": "champ de gravitation",
+    "image": "courses/444985189/444985189.jpg",
+    "description": "Premier cours de physique",
+    "pub_date": "2020-03-22T21:49:11.936Z",
+    "slug": "champ-de-gravitation",
+    "overview": null,
+    "created": "2020-05-02T02:22:03.508Z"
+  }
+}
+]

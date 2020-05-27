@@ -1,19 +1,33 @@
 {% extends "afrik_app/base.html" %}
-
+{% block title %}
+  {{ object.title }}
+{% endblock %}
 
 {% block content %}
+  {% with subject=course.subject %}
+    <div class="col text-center">
+  <h1>
+    {{ object.title }}
+  </h1>
+  </div>
 
-
-    <div class='row'>
-        <div class='col-12 col-md-6'>
-                <h1>{{ object.title }}</h1>
-                {{ object.timestamp|timesince }} ago
-                {{ object.description|linebreaks }}<br/>
-                {% if object.image %}
-                    <img src='{{ object.image.url }}' class='img-fluid' />
-                {% endif %}
-        </div>
-</div>
-
-
+    <div class="col text-center">
+      <h2 class="">overview</h2>
+    <p>
+      <a href="{% url "course:course_list_subject" subject.slug %}">{{subject.title}}</a>
+      {{course.modules.count}} modules.
+      Instructor: {{ course.owner.get_full_name}}
+    </p>
+    {{object.overview|linebreaks }}
+    {% if request.user.is_authenticated %}
+      <form action="{% url "student:student_enroll_course"%}" method="post">
+        {% csrf_token %}
+        {{ enroll_form }}
+        <input type="submit" class="btn btn-primary"  value="Enroll now">
+      </form>
+    {% else %}
+      <a href="{% url "student:student_registration"%}" class="btn">Inscrivez vous</a>
+    {% endif %}
+  </div>
+  {% endwith %}
 {% endblock %}

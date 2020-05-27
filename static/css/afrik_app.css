@@ -108,9 +108,8 @@ h3 {
     padding: 0;
     text-align: right;
     position: absolute;
-    width: 1010px;
-    left: 35%;
-    top: 30%;
+    /*left: 35%;
+    top: 30%;*/
 }
 .nav_drop_menu > ul {
     list-style: none;
@@ -392,30 +391,6 @@ li:hover > ul.drop-menu li {
 
 .nav_side_bar_btns-open .navigation__social-ul li:nth-child(4) {
   transition-delay: .4s;
-}
-
-/*----------------------------------------------------------Container---------------------------------------------------------------*/
-.container {
-    margin: 10px auto;
-    margin-top: 10px;
-    position: relative;
-    width: 70%;
-    height: 0;
-    padding-bottom: 40%;
-    background: var(--site-main-color);
-    border: solid 40px rgba(44, 44, 44, 0.78);
-    transform: translate(90%,70%);
-}
-.slider_img {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    transform: translate(100%,70%);
-}
-.slider_img img {
-    width: 100%;
-    height: 150%;
-    transform: translate(90%,70%);
 }
 
 /*-------------------------------------------------------SectionAccueil-----------------------------------------------------*/
@@ -802,7 +777,7 @@ a, a:hover, a:focus {
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    display: none;
+    /*display: none;*/
 }
 
 .navbar-btn {
@@ -960,4 +935,13 @@ a.article, a.article:hover {
     transform: none;
     opacity: 1;
     margin: 5px auto;
+}
+
+/* ---------------------------------------------------
+    Course Module Style
+----------------------------------------------------- */
+
+.selected {
+  color: #fff;
+  background-color: var(--site-main-color);
 }

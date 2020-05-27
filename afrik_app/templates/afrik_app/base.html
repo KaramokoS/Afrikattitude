@@ -40,123 +40,9 @@
   </head>
   <body>
 <!--  <header> -->
-   <div id="sidebar">
-      <nav class="header_main_nav">
-        <div class="row">
-            <a class="menu_button_small_size js__menu_button_small_size">
-              <i class="ion-navicon-round"></i>
-            </a>
-        <a href="{% url "accueil"%}">
-          <img src="{% static "img/logo_afrikattitude-01.jpg" %}" alt="logo afrikattitude" class="logo_tuwaxu"> <br>
-        </a>
-         <nav class="nav_drop_menu ">
-             <ul>
-                 <li>Mathematiques
-                     <ul class="drop-menu men-#{i}">
-                         <li><a href="{% url 'tarifs'%}">Cours en ligne</a></li>
-                         <li>Cours de soutien</li>
-                         <li>Programme</li>
-                         <li>Applications</li>
-                     </ul>
-                 </li>
-                 <li>Physique &mdash;Chimie
-                     <ul class="drop-menu men-#{i}">
-                         <li>Cours en ligne</li>
-                         <li>Cours de soutien</li>
-                         <li>Programme</li>
-                         <li>Applications</li>
-                     </ul>
-                 </li>
-                 <li>Informatique
-                     <ul class="drop-menu men-#{i}">
-                         <li>Cours en ligne</li>
-                         <li>Notre programme</li>
-                         <li>Applications</li>
-                     </ul>
-                 </li>
-                 <li>Anglais
-                     <ul class="drop-menu men-#{i}">
-                         <li>Cours en ligne</li>
-                         <li>Cours de soutien</li>
-                         <li>Programme</li>
-                         <li>English club</li>
-                     </ul>
-                 </li>
-               </ul>
-             </nav>
-           </div>
-         </nav>
-       </div>
-       <!-- Sidebar Holder -->
-       <nav id="sidebar1">
-           <div class="sidebar-header">
-               <h3>Bootstrap Sidebar</h3>
-           </div>
-
-           <ul class="list-unstyled components">
-               <p>Dummy Heading</p>
-               <li class="active">
-                   <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                   <ul class="collapse list-unstyled" id="homeSubmenu">
-                       <li>
-                           <a href="#">Home 1</a>
-                       </li>
-                       <li>
-                           <a href="#">Home 2</a>
-                       </li>
-                       <li>
-                           <a href="#">Home 3</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="#">About</a>
-                   <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                   <ul class="collapse list-unstyled" id="pageSubmenu">
-                       <li>
-                           <a href="#">Page 1</a>
-                       </li>
-                       <li>
-                           <a href="#">Page 2</a>
-                       </li>
-                       <li>
-                           <a href="#">Page 3</a>
-                       </li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="#">Portfolio</a>
-               </li>
-               <li>
-                   <a href="#">Contact</a>
-               </li>
-           </ul>
-
-           <ul class="list-unstyled CTAs">
-               <li>
-                   <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-               </li>
-               <li>
-                   <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-               </li>
-           </ul>
-       </nav>
-
-       <!-- Page Content Holder -->
-           <nav class="navbar navbar-expand-lg navbar-light bg-light barre_nav ml-auto">
-               <div class="container-fluid  ">
-
-                   <button type="button" id="sidebarCollapse" class="navbar-btn">
-                       <span></span>
-                       <span></span>
-                       <span></span>
-                   </button>
-           </nav>
-
-           <div class="line"></div>
-
+{% include "afrik_app/snippets/navbar.html"%}
 <!--</header> -->
-<div id="content">
+<div class="container-fluid">
   {% block content %}
   {% endblock %}
 </div>
@@ -203,11 +89,18 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
     <script src="{% static "js/scrips.js"%}"></script>
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <script>
+      $(document).ready(function(){
+        {% block domready %}
+        {% endblock %}
+      });
+    </script>
 
   </body>
 </html>
