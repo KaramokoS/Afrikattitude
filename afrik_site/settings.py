@@ -21,7 +21,7 @@ STATIC_DIRS = os.path.join(BASE_DIR,'afrik_app/static')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'v*-_=f43cseij7jek-#sxvmzs8vr)=hq$@y(+a3%o+=a1b34x6'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
