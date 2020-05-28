@@ -8,7 +8,7 @@ certifi==2019.6.16
 cffi==1.13.1
 chardet==3.0.4
 decorator==4.4.1
-Django==2.2.10
+Django==2.2.1
 django-bootstrap3==11.1.0
 django-bootstrap4==1.0.1
 django-braces==1.13.0
