@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     #our apps
     'afrik_app',
     'phone_field',
-    'courses',
-    'students',
-    'embed_video',
-    'memcache_status',
-    'rest_framework',
+    # 'courses',
+    # 'students',
+    # 'embed_video',
+    # 'memcache_status',
+    # 'rest_framework',
 ]
 
 REST_FRAMEWORK = {

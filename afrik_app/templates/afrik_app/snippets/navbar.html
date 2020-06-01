@@ -52,13 +52,6 @@
 
           </div>
           <div class="col-md-2 py-5  mt-auto ">
-            {% if user.is_authenticated %}
-            <a href="{% url "course:manage_course_list"%}" class="btn btn-info">Gerer</a>
-            <a href="{% url "course:logout"%}" class="btn btn-info">Deconnectez</a>
-            {% else %}
-            <a href="{% url "course:login"%}" class="btn btn-info"> Ressources</a>
-            {% endif %}
-
           </div>
         </div>
       </nav>
