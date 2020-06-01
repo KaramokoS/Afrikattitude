@@ -159,10 +159,10 @@ CACHE_MIDDLEWARE_KEY_PREFIX = 'afrik_site'
 # Let's encrypte from  https://www.codingforentrepreneurs.com/blog/ssltls-settings-for-django/
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
-SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT             = True
-SESSION_COOKIE_SECURE           = True
-CSRF_COOKIE_SECURE              = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
-SECURE_HSTS_SECONDS             = 1000000
-SECURE_FRAME_DENY               = True
+SECURE_PROXY_SSL_HEADER         = None#('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = False #True
+SESSION_COOKIE_SECURE           = False#True
+CSRF_COOKIE_SECURE              = False#True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = False#True
+SECURE_HSTS_SECONDS             = None#1000000
+SECURE_FRAME_DENY               = False#True
