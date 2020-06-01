@@ -16,11 +16,12 @@ from django.urls import reverse_lazy
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STATIC_DIRS = os.path.join(BASE_DIR,'afrik_app/static')
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'v*-_=f43cseij7jek-#sxvmzs8vr)=hq$@y(+a3%o+=a1b34x6'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,11 +41,11 @@ INSTALLED_APPS = [
     #our apps
     'afrik_app',
     'phone_field',
-    'courses',
-    'students',
-    'embed_video',
-    'memcache_status',
-    'rest_framework',
+    # 'courses',
+    # 'students',
+    # 'embed_video',
+    # 'memcache_status',
+    # 'rest_framework',
 ]
 
 REST_FRAMEWORK = {
@@ -115,13 +116,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CACHES = {
-#     'default': {
-#         'BACKEND':
-#         'django.core.cache.backends.memcached.MemcachedCache',
-#         'LOCATION':'127.0.0.1:11211'
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND':
+        'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION':'127.0.0.1:11211'
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -143,8 +144,9 @@ LOGIN_REDIRECT_URL = reverse_lazy('student:student_course_list')
 
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'afrik_app/static/')
-STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+STATIC_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+
 
 # insta_project/settings.py
 MEDIA_URL = '/media/'
@@ -154,14 +156,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # CACHE_MIDDLEWARE_SECONDS = 60*15 # 15 minutes
 # CACHE_MIDDLEWARE_KEY_PREFIX = 'afrik_site'
 
-
 # Let's encrypte from  https://www.codingforentrepreneurs.com/blog/ssltls-settings-for-django/
-# CORS_REPLACE_HTTPS_REFERER      = False
-# HOST_SCHEME                     = "http://"
-# SECURE_PROXY_SSL_HEADER         = None
-# SECURE_SSL_REDIRECT             = False
-# SESSION_COOKIE_SECURE           = False
-# CSRF_COOKIE_SECURE              = False
-# SECURE_HSTS_SECONDS             = None
-# SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
-# SECURE_FRAME_DENY               = False
+# CORS_REPLACE_HTTPS_REFERER      = True
+# HOST_SCHEME                     = "https://"
+# SECURE_PROXY_SSL_HEADER         = None#('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT             = False #True
+# SESSION_COOKIE_SECURE           = False#True
+# CSRF_COOKIE_SECURE              = False#True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS  = False#True
+# SECURE_HSTS_SECONDS             = None#1000000
+# SECURE_FRAME_DENY               = False#True
