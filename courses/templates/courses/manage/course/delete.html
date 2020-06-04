@@ -1,0 +1,18 @@
+{% extends "afrik_app/base.html" %}
+
+{%block title%}
+Delete Course
+{% endblock %}
+
+{% block content %}
+  <h1> Supprimer le cours {{object.title}}</h1>
+  <div class="row">
+  <div class="col col-md-6 mx-auto">
+    <form  action="" method="post">
+      {% csrf_token %}
+      <p>Êtes vous sûr de vouloir effacer "{{object}}" ?</p>
+      <p> <input type="submit" class="button" value="Confirm"></p>
+    </form>
+  </div>
+  </div>
+{% endblock %}

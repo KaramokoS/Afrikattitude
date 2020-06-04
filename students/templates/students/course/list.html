@@ -1,0 +1,34 @@
+{% extends "afrik_app/base.html" %}
+
+{%block title%}
+  Mes cours
+{% endblock %}
+
+{% block content %}
+<div class="row ">
+  <div class="col text-center">
+    <h1>Mes Cours</h1>
+  </div>
+</div>
+<div class="row">
+ <div class="col-6 mx-auto">
+   {% for course in object_list %}
+    <div class="text-center">
+      <h3>{{course.title}}</h3>
+      <p><a href="{% url "student:student_course_detail" course.id %}" class="btn btn-primary"> Access contents </a></p>
+    </div>
+    <hr>
+    <a href="{% url "course:course_list"%}"> Browse courses </a>
+    to enroll in a course
+   {% empty %}
+   <div class="text-center">
+     <p>
+       You are not enrolled in any courses yet.
+       <a href="{% url "course:course_list"%}"> Browse courses </a>
+       to enroll in a course
+     </p>
+   </div>
+   {% endfor %}
+ </div>
+ </div>
+{% endblock %}

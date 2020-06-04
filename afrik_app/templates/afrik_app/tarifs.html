@@ -1,0 +1,82 @@
+{% extends "afrik_app/base.html"%}
+{% load static %}
+{% block title%} {% endblock %}
+
+{% block content%}
+
+
+<section class="section_tarifs">
+    <figure class="classe_1 col-6 col-md-4">
+        <h3>
+            Terminale Sciences Exactes (TSE) <br>
+            Tarif: 20 000 FCFA/mois
+        </h3>
+        <div class="classe_1_description">
+            Cours en petit groupe de 4 personnes au maximum.
+            Les matières enseignées sont les suivantes:
+        </div>
+        <div class="classe_1_service">
+                <div>
+                    <i class="glyphicon glyphicon-ok"></i> Mathématiques
+                </div>
+                <div>
+                    <i class="glyphicon glyphicon-ok"></i> Physique-Chimie
+               </div>
+                <div>
+                    <i class="glyphicon glyphicon-ok"></i> Anglais
+                </div>
+        </div>
+        <div class="classe_1_img">
+            <img src="{% static "img/classe_1_img.jpg"%}" alt="classe 1">
+        </div>
+    </figure>
+    <figure class="classe_2 col-6 col-md-4">
+        <h3>
+            Terminale Sciences Expérimentales (TSExp) <br>
+            Tarif: 20 000 FCFA/mois
+        </h3>
+        <div class="classe_2_description">
+          Cours en petit groupe de 4 personnes au maximum.
+          Les matières enseignées sont les suivantes:
+        </div>
+        <div class="classe_2_service">
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Biologie
+            </div>
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Mathématiques
+           </div>
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Physique-Chimie
+            </div>
+        </div>
+        <div class="classe_2_img">
+            <img src="{% static "img/classe_2_img.jpg"%}" alt="classe 2">
+        </div>
+    </figure>
+    <figure class="classe_3 col-6 col-md-4">
+        <h3>
+            Toute autre matière <br>
+            Tarif mensuel : 10 0000 FCFA/matière
+        </h3>
+        <div class="classe_3_description">
+            Cours à domicile ou en petit groupe de 4 personnes, nous appliquons les mêmes tarifs.
+        </div>
+        <div class="classe_3_service">
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Accès aux ressources sur internet
+            </div>
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Suivie personnalisée
+           </div>
+            <div>
+                <i class="glyphicon glyphicon-ok"></i> Séries d'exercices mise à disposition
+            </div>
+        </div>
+        <div class="classe_3_img">
+            <img src="{% static "img/classe_3_img.jpg"%}" alt="classe 3">
+        </div>
+    </figure>
+</section>
+
+{% endblock %}

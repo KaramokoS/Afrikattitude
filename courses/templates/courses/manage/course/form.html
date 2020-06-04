@@ -1,0 +1,25 @@
+{% extends "afrik_app/base.html" %}
+
+{%block title%}
+  {% if object %} Edit Course {{object.title}}
+  {% else %} Créer un nouveau cours
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>
+    {% if object %} Edit Course {{object.title}}
+    {% else %} Créer un nouveau cours
+    {% endif %}
+  </h1>
+  <div class="row">
+  <div class="col col-md-6 mx-auto">
+    <h2> Info Cours </h2>
+    <form  action="." method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <p> <input type="submit" value="save course"></p>
+    </form>
+  </div>
+  </div>
+{% endblock %}
