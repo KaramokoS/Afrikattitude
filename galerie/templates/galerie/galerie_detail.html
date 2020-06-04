@@ -1,0 +1,14 @@
+{% extends 'dakuoblog/entete.html'%}
+{% load staticfiles %}
+{% block content%}
+{% for obj in object_list %}
+  <div class="container py-5">
+    <div  class="col mx-auto mt-5 mb-5 text-center">
+      <h2>{{ obj.name }}</h2>
+      <img src='{{ obj.photo.url }}' />
+      <p>{{ obj.description }}</p>
+    </div>
+  </div>
+{% endfor %}
+{% include "pagination.html" with page=page_obj %}
+{% endblock %}

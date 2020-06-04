@@ -1,1 +1,1 @@
-web: gunicorn afrik_site.wsgi --log-file -
+web: gunicorn blogperso.wsgi --log-file -
