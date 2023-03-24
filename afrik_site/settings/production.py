@@ -21,7 +21,7 @@ STATIC_DIRS = os.path.join(BASE_DIR,'afrik_app/static')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY ='v*-_=f43cseij7jek-#sxvmzs8vr)=hq$@y(+a3%o+=a1b34x6'# os.environ.get('SECRET_KEY')
+SECRET_KEY =os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,18 +41,18 @@ INSTALLED_APPS = [
     #our apps
     'afrik_app',
     'phone_field',
-    # 'courses',
-    # 'students',
-    # 'embed_video',
-    # 'memcache_status',
-    # 'rest_framework',
+    'courses',
+    'students',
+    'embed_video',
+    'memcache_status',
+    'rest_framework',
 ]
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES':[
-#     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,13 +116,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CACHES = {
-#     'default': {
-#         'BACKEND':
-#         'django.core.cache.backends.memcached.MemcachedCache',
-#         'LOCATION':'127.0.0.1:11211'
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND':
+        'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION':'127.0.0.1:11211'
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -152,17 +152,17 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# CACHE_MIDDLEWARE_ALIAS = 'default'
-# CACHE_MIDDLEWARE_SECONDS = 60*15 # 15 minutes
-# CACHE_MIDDLEWARE_KEY_PREFIX = 'afrik_site'
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 60*15 # 15 minutes
+CACHE_MIDDLEWARE_KEY_PREFIX = 'afrik_site'
 
-# Let's encrypte from  https://www.codingforentrepreneurs.com/blog/ssltls-settings-for-django/
-# CORS_REPLACE_HTTPS_REFERER      = True
-# HOST_SCHEME                     = "https://"
-# SECURE_PROXY_SSL_HEADER         = None#('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT             = False #True
-# SESSION_COOKIE_SECURE           = False#True
-# CSRF_COOKIE_SECURE              = False#True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS  = False#True
-# SECURE_HSTS_SECONDS             = None#1000000
-# SECURE_FRAME_DENY               = False#True
+#Let's encrypte from  https://www.codingforentrepreneurs.com/blog/ssltls-settings-for-django/
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = None#('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = False #True
+SESSION_COOKIE_SECURE           = False#True
+CSRF_COOKIE_SECURE              = False#True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = False#True
+SECURE_HSTS_SECONDS             = None#1000000
+SECURE_FRAME_DENY               = False#True

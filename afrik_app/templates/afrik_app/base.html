@@ -39,9 +39,10 @@
     <meta charset="utf-8">
   </head>
   <body>
-<!--  <header> -->
-{% include "afrik_app/snippets/navbar.html"%}
-<!--</header> -->
+  <div class="container-fluid">
+    {% include "afrik_app/snippets/navbar.html"%}
+  </div>
+
 <div class="container-fluid">
   {% block content %}
   {% endblock %}

@@ -9,3 +9,4 @@ django-phone-field==1.8.0
 django-phonenumber-field==4.0.0
 djangorestframework==3.11.0
 django-braces==1.13.0
+Pillow==9.4.0
