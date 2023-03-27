@@ -169,10 +169,16 @@ li:hover > ul.drop-menu li {
     box-shadow: 0 2px 2px #efefef;
     padding: 0;
 }
-.header_main_nav_sticky .logo_tuwaxu {
+.header_main_nav_sticky {
     margin-top: 10px;
     height: 80px;
 }
+
+.logo_tuwaxu-new {
+    max-width: 100%;
+    max-height: 50px;
+}
+
 .header_main_nav_sticky .nav_drop_menu > ul {
     padding: 0;
     margin-bottom: 10px;

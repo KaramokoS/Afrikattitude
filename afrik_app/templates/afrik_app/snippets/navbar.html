@@ -2,62 +2,61 @@
 <div id="sidebar" class="bg-light">
    <nav class="header_main_nav">
      <div class="row">
-       <div class="col-md-2 mx-auto">
+       <div class="col-md-2 py-1 px-auto" style="display: flex;">
          <a class="menu_button_small_size js__menu_button_small_size">
            <i class="ion-navicon-round"></i>
          </a>
          <a href="{% url "accueil"%}">
-           <img src="{% static "img/logo_afrikattitude-01.jpg" %}" alt="logo afrikattitude" class="logo_tuwaxu"> <br>
+           <img style="max-height: 65px; max-width: 100%;" src="{% static "img/logo_afrikattitude-01.jpg" %}" alt="logo afrikattitude" class="logo_tuwaxu-new"> <br>
          </a>
        </div>
-       <div class="col-md-7 py-5 ml-3 ">
+       <div class="col-md-7 py-1 pl-2 ">
 
-      <nav class="nav_drop_menu">
+      <nav class="nav_drop_menu col">
           <ul>
               <li>Mathematiques
-                  <ul class="drop-menu men-#{i}">
+                  {% comment %} <ul class="drop-menu men-#{i}">
                       <li><a href="{% url 'tarifs'%}">Cours en ligne</a></li>
                       <li>Cours de soutien</li>
                       <li>Programme</li>
                       <li>Applications</li>
-                  </ul>
+                  </ul> {% endcomment %}
               </li>
-              <li>Physique &mdash;Chimie
+              {% comment %} <li>Physique &mdash;Chimie
                   <ul class="drop-menu men-#{i}">
                       <li>Cours en ligne</li>
                       <li>Cours de soutien</li>
                       <li>Programme</li>
                       <li>Applications</li>
                   </ul>
-              </li>
+              </li> {% endcomment %}
               <li>Informatique
-                  <ul class="drop-menu men-#{i}">
+                  {% comment %} <ul class="drop-menu men-#{i}">
                       <li>Cours en ligne</li>
                       <li>Notre programme</li>
                       <li>Applications</li>
-                  </ul>
+                  </ul> {% endcomment %}
               </li>
-              <li>Anglais
+              {% comment %} <li>Anglais
                   <ul class="drop-menu men-#{i}">
                       <li>Cours en ligne</li>
                       <li>Cours de soutien</li>
                       <li>Programme</li>
                       <li>English club</li>
                   </ul>
-              </li>
+              </li> {% endcomment %}
             </ul>
           </nav>
           </div>
-          <div class="row">
-
-          </div>
-          <div class="col-md-2 py-5  mt-auto ">
+          <div class="col-md-3 py-1 ">
+            <div class="row" style="display: flex;">
             {% if user.is_authenticated %}
-            <a href="{% url "course:manage_course_list"%}" class="btn btn-info">Gerer</a>
-            <a href="{% url "course:logout"%}" class="btn btn-info">Deconnectez</a>
+            <a href="{% url "course:manage_course_list"%}" class="btn btn-info col" style="margin-bottom: 0;margin-top: 10px;">Gerer</a>
+            <a href="{% url "course:logout"%}" class="btn btn-info col" style="margin-bottom: 0;margin-top: 10px;">Deconnectez</a>
             {% else %}
-            <a href="{% url "course:login"%}" class="btn btn-info"> Ressources</a>
+            <a href="{% url "course:login"%}" class="btn btn-info col" style="margin-bottom: 0;margin-top: 10px;"> Ressources</a>
             {% endif %}
+            </div>
 
           </div>
         </div>
