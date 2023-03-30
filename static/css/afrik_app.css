@@ -176,10 +176,10 @@ li:hover > ul.drop-menu li {
     height: 80px;
 }
 .header_main_nav_sticky .nav_drop_menu  {
-    position: relative;
+    /* position: relative;
     left: 10%;
     margin-top: 5px;
-    top: 15%;
+    top: 15%; */
 }
 .header_main_nav_sticky .nav_drop_menu > ul {
     margin-top: 1px;
